@@ -1,0 +1,12 @@
+/target/
+/${artifactId}-client/target/
+/${artifactId}-client-config/target/
+/${artifactId}-interface/target/
+/${artifactId}-runtime/target/
+/${artifactId}-service/target/
+/${artifactId}-service-config/target/
+/${artifactId}-runtime/src/
+/${artifactId}-client/src/
+/${artifactId}-service/src/main/java/start.out
+/${artifactId}-service/src/main/java/${packageInPathFormat}/servlet/
+/${artifactId}-service-config/src/main/resources/webapp/doc/rest/

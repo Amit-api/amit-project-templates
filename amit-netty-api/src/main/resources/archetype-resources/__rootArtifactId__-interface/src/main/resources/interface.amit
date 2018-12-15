@@ -1,0 +1,24 @@
+
+[java_package="${package}"]
+
+project ${serviceName};
+
+type Person {
+	int personId;
+	string personName;
+}
+
+
+exception InvalidPersonException {
+	string reason;
+}
+
+interface ${serviceName} {
+	
+	void createPerson(Person person) throws InvalidPersonException;
+	
+	Person getPerson(int personId) throws InvalidPersonException;
+}
+
+service ${serviceName} : ${serviceName};
+
