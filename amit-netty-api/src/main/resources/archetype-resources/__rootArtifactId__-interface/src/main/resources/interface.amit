@@ -6,19 +6,36 @@ project ${serviceName};
 type Person {
 	int personId;
 	string personName;
+	datetime birthday;
+	uuid internameId;
+	array int friendsIds;
 }
 
-
 exception InvalidPersonException {
+	string code;
 	string reason;
 }
 
-interface ${serviceName} {
-	
-	void createPerson(Person person) throws InvalidPersonException;
-	
-	Person getPerson(int personId) throws InvalidPersonException;
+validation validate_person for Person {
+	personId !null;
+	personName !empty "^[A-Za-z]+$";
+	birthday !null;
 }
 
+interface ${serviceName} {
+	[doc="this function creates a person and saves it"]
+	void createPerson(Person person) throws InvalidPersonException
+		validate {
+			person !null;
+			validate_person;
+		};
+	
+	[doc="this function returns the person using personId"]
+	Person getPerson(int personId) throws InvalidPersonException 
+		validate {
+			personId !null;
+		};
+}
+[doc="a starter service, play and modify it"]
 service ${serviceName} : ${serviceName};
 
