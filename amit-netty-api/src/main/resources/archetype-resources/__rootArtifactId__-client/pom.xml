@@ -8,7 +8,7 @@
 		<artifactId>${rootArtifactId}</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	
+
 	<artifactId>${rootArtifactId}-client</artifactId>
 	<name>${rootArtifactId}-client</name>
 	<packaging>jar</packaging>
@@ -27,7 +27,13 @@
 			<artifactId>${rootArtifactId}-interface</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 			<scope>provided</scope>
-		</dependency>		
+		</dependency>
+		<dependency>
+			<groupId>com.amitapi.netty.client</groupId>
+			<artifactId>amit-netty-client</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>provided</scope>
+		</dependency>
 	</dependencies>
 	<build>
 		<plugins>
@@ -81,7 +87,7 @@
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>		
+			</plugin>
 		</plugins>
-	</build>	
+	</build>
 </project>

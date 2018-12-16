@@ -55,6 +55,20 @@
 							<goal>amit</goal>
 						</goals>
 					</execution>
+					<execution>
+						<id>doc</id>
+						<configuration>
+							<sourceDirectory>.</sourceDirectory>
+							<compileFile>interface.amit</compileFile>
+							<templateName>doc</templateName>
+							<outputDirectory>src/main/resources</outputDirectory>
+							<compileJarClass>${package}.Location</compileJarClass>
+							<templateJarClass>com.amit.api.templates.Location</templateJarClass>
+						</configuration>
+						<goals>
+							<goal>amit</goal>
+						</goals>
+					</execution>
 				</executions>
 				<dependencies>
 					<dependency>
