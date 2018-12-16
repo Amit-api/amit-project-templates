@@ -5,11 +5,8 @@ package ${package}.service;
 
 import java.util.concurrent.CompletableFuture;
 
-import com.test.api.test_api.Person;
-
-import ${package}.InvalidIdException;
-import ${package}.Data;
-import ${package}.intrf.${serviceName};
+import ${package}.Person;
+import ${package}.intrf.async.${serviceName};
 
 /**
  * a simple service implementation 

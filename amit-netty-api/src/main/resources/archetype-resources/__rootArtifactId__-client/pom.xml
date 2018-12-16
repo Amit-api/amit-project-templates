@@ -47,7 +47,7 @@
 						<configuration>
 							<sourceDirectory>.</sourceDirectory>
 							<compileFile>interface.amit</compileFile>
-							<templateName>client</templateName>
+							<templateName>netty-client</templateName>
 							<outputDirectory>src/main/java</outputDirectory>
 							<compileJarClass>${package}.Location</compileJarClass>
 							<templateJarClass>com.amit.api.templates.Location</templateJarClass>
